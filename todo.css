@@ -1,0 +1,9 @@
+.container, addTask{
+    border: 1px solid black;
+}
+.container{
+display: flex;
+border: 2px dotted orange;
+/* outline: 6px solid blue; */
+justify-content: space-around;
+}
