@@ -7,26 +7,16 @@
     <title>Todo App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./todo.css">
-    <script src="main.js"></script>
 </head>
 
 <body>
-        <div class="addTask">
-                <input type="text" id="taskName" placeholder="Add New Task...!" required/>
-                <button id="addTask">AddNewTask</button>
-            </div>
-
-
-    <div class="container">
-<div class="unCompleted">
-    <h5>Uncompleted Task</h5>
-</div>
-    <div class="highPriority">
-        <h5>High Priority Tasks</h5>
-    </div>
-    <div class="completed"></div>
-    <h5>Completed Task</h5>
-    </div>
-</body>
-
+        <header>TODO_LIST</header>
+       <div class="input">
+            <input class="inputBox" id="task" placeholder="Add New Task...!" required ><button class="inputButton" id="add">Add Task</button>
+       </div>
+        <hr>
+        <div id="todos"></div>
+         
+        <script src="todo.js"></script>
+        </body>
 </html>
