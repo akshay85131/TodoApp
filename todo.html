@@ -8,10 +8,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./todo.css">
 </head>
 
-<body>
+<body onload="getAllItems()">
         <header>TODO_LIST</header>
        <div class="input">
-            <input class="inputBox" id="task" placeholder="Add New Task...!" required ><button class="inputButton" id="add">Add Task</button>
+            <input type="text" class="inputBox" id="task" placeholder="Add New Task...!" required ><button class="inputButton" id="add">Add Task</button>
        </div>
         <hr>
         <div id="todos">

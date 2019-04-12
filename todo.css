@@ -26,7 +26,13 @@ header {
     height: 30px;
 }
 
-.inputButton {
+.libuttons{
+display: flex;
+justify-content: flex-end
+}
+
+
+.inputButton{
     display: flex;
     text-align: center;
     align-items: flex-end;
