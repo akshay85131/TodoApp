@@ -1,5 +1,7 @@
 const ul = document.getElementById('allTodos')
 let taskName = document.getElementById('task')
+const completedTasks = document.getElementById('completed')
+const unCompletedTasks = document.getElementById('uncompleted')
 let taskArray = window.localStorage.getItem('todo') ? (JSON.parse(window.localStorage.getItem('todo'))) : []
 
 let createNewTask = function (text, id, completed) {
@@ -9,19 +11,17 @@ let createNewTask = function (text, id, completed) {
   let eInput = document.createElement('input')
   let editButton = document.createElement('button')
   let deleteButton = document.createElement('button')
-
   // checkBox.addEventListner('click', checkFunc)
   checkBox.type = 'checkBox'
   eInput.type = 'text'
   editButton.setAttribute('class', 'edit')
   editButton.textContent = 'Edit'
-  // editButton.className = 'edit'
   deleteButton.setAttribute('class', 'delete')
-  // deleteButton.setAttribute('id', 'del' + id)
   deleteButton.textContent = 'Delete'
-  // deleteButton.className = 'delete'
   deleteButton.addEventListener('click', deleteTask)
   editButton.addEventListener('click', editTask)
+  checkBox.addEventListener('click', checkFunc)
+  console.log(checkBox)
   label.textContent = text
   taskList.setAttribute('id', id)
   checkBox.checked = completed
@@ -103,3 +103,28 @@ function editTask (e) {
   }
   window.localStorage.setItem('todo', JSON.stringify(taskArray))
 }
+
+function checkFunc (e) {
+  if (e.target.checked) {
+    let taskItems = JSON.parse(window.localStorage.getItem('todo'))
+    for (let item of taskItems) {
+      if (item.id * 1 === e.target.parentNode.parentNode.id * 1) {
+        item.completed = true
+      }
+    }
+    window.localStorage.setItem('todo', JSON.stringify(taskItems))
+  }
+  
+  
+  
+  else {
+    let taskItems = JSON.parse(window.localStorage.getItem('todo'))
+    for (let item of taskItems) {
+      if (item.id * 1 === e.target.parentNode.parentNode.id * 1) {
+        item.completed = false
+      }
+    }
+    window.localStorage.setItem('todo', JSON.stringify(taskItems))
+  }
+}
+

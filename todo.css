@@ -43,7 +43,10 @@ ul li input[type=text] {
   ul li.editMode label {
     display: none;
 }
-
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+    color: red;
+  }
 .inputButton{
     display: flex;
     text-align: center;
