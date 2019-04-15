@@ -26,11 +26,23 @@ header {
     height: 30px;
 }
 
-.libuttons{
+.liButtons{
 display: flex;
 justify-content: flex-end
 }
 
+ul li input[type=text] {
+    display: none;
+  }
+  
+  ul li.editMode input[type=text] {
+    display: inline-block;
+
+  }
+  
+  ul li.editMode label {
+    display: none;
+}
 
 .inputButton{
     display: flex;
@@ -82,4 +94,7 @@ li {
     height: auto;
     overflow: hidden;
     word-wrap: break-word;
+}
+h4{
+    text-align:center;
 }
