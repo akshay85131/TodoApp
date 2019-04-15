@@ -43,9 +43,25 @@ ul li input[type=text] {
   ul li.editMode label {
     display: none;
 }
+
+/* ul li .textAreaDiv textarea {
+    display: none;
+  }
+  
+  ul li.textAreaDiv.editMode textarea {
+    display: inline-block;
+
+  }
+  
+  ul li .textAreaDiv.editMode label {
+    display: none;
+} */
+
 input[type=checkbox]:checked + label {
     text-decoration: line-through;
     color: red;
+    background: #888;
+	/* color: #fff; */
   }
 .inputButton{
     display: flex;
